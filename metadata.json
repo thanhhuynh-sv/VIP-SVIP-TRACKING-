@@ -1,0 +1,6 @@
+{
+  "name": "VIP & SVIP Student Tracker",
+  "description": "Hệ thống quản lý, theo dõi mốc học tập và tiến độ chuyên biệt dành cho học viên VIP và SVIP.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

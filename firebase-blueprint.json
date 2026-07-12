@@ -1,0 +1,38 @@
+{
+  "entities": {
+    "Student": {
+      "title": "Student",
+      "description": "Represents a VIP/SVIP student being tracked.",
+      "type": "object",
+      "properties": {
+        "studentId": { "type": "string", "description": "Unique student identifier (Mã HV)" },
+        "fullName": { "type": "string", "description": "Student full name (Họ và tên)" },
+        "phone": { "type": "string", "description": "Phone number" },
+        "email": { "type": "string", "description": "Email address" },
+        "coursePackage": { "type": "string", "description": "Course/Package name" },
+        "startDate": { "type": "string", "format": "date", "description": "Course start date" },
+        "endDate": { "type": "string", "format": "date", "description": "Course end date" },
+        "totalSessions": { "type": "number", "description": "Total sessions in contract" },
+        "attendedSessions": { "type": "number", "description": "Sessions attended so far" },
+        "teacherAdvisor": { "type": "string", "description": "Assigned teacher advisor / mentor" },
+        "academicAdvisor": { "type": "string", "description": "Assigned academic staff member" },
+        "learningGoal": { "type": "string", "description": "Learning roadmap and target" },
+        "status": { "type": "string", "enum": ["active", "paused", "graduated", "dropped"], "description": "Current enrollment status" },
+        "notes": { "type": "string", "description": "General notes and academic follow-ups" },
+        "milestones": { "type": "object", "description": "Key tracking milestones" },
+        "vipGifts": { "type": "object", "description": "VIP welcome gifts checklist" },
+        "parentFeedback": { "type": "string", "description": "Student or parent feedback" },
+        "academicActions": { "type": "string", "description": "Actions taken by academic department" },
+        "createdAt": { "type": "string", "format": "date-time", "description": "Creation timestamp" },
+        "updatedAt": { "type": "string", "format": "date-time", "description": "Last update timestamp" }
+      },
+      "required": ["studentId", "fullName", "coursePackage", "status"]
+    }
+  },
+  "firestore": {
+    "students/{studentId}": {
+      "schema": "Student",
+      "description": "Collection of tracked VIP/SVIP students"
+    }
+  }
+}
