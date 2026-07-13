@@ -5,7 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
-    base: '/VIP/SVIP TRACKING/',
+   base: '/VIP-SVIP-TRACKING-/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
